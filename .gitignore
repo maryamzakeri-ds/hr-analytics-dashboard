@@ -1,48 +1,40 @@
-# Python cache
+# Python
 __pycache__/
 *.py[cod]
-*$py.class
+*.pyo
 
 # Virtual environments
-.venv/
 venv/
+.venv/
 env/
 
 # Environment variables
 .env
-.env.*
 
-# IDE settings
+# IDEs
 .vscode/
 .idea/
 
-# macOS files
+# macOS
 .DS_Store
 
-# Jupyter notebooks
+# Jupyter
 .ipynb_checkpoints/
-
-# Data files
-data/
-
-# Model artifacts
-models/*.pkl
-models/*.joblib
 
 # Logs
 *.log
 
-# Temporary files
-*.tmp
-*.bak
+# Test cache
+.pytest_cache/
+.coverage
+htmlcov/
 
 # Build files
 build/
 dist/
 *.egg-info/
 
-# Testing / cache
-.pytest_cache/
-.mypy_cache/
-.coverage
-htmlcov/
+# Data files
+data/
+
+
