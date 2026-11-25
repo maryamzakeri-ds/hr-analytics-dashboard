@@ -280,7 +280,7 @@ def update_data(department, gender, age):
 
     return filtered_df.to_dict("records")
 
-app.callback(
+@app.callback(
     Output("download", "data"),
     Input("btn-dl", "n_clicks"),
     State("filter-department", "value"),
@@ -290,7 +290,7 @@ app.callback(
 )
 def download(n_clicks, department, gender, age):
     filtered_df = df[df["Department"].isin(department or []) & df["Gender"].isin(gender or [])& df["Age"].between(age[0], age[1])]
-    return dcc.send_data_frame(filtered_df.to_csv, "data/hr_filtered.csv", index=False)
+    return dcc.send_data_frame(filtered_df.to_csv, "hr_filtered.csv", index=False)
 
 if __name__ == "__main__":
     app.run(debug=True)
